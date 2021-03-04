@@ -1,2 +1,3 @@
+matplotlib
 mdml_client
 funcx
