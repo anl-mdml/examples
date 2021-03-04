@@ -1,2 +1,2 @@
 # MDML Examples
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/anl-mdml/examples/main?filepath=intro.ipynb)
+Try this example on ![Google Collab](https://colab.research.google.com/drive/1mXs0CktMXB1Rd6GQfx4gynZ6Q4Gb7pRL?usp=sharing).
