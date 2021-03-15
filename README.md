@@ -18,4 +18,4 @@ If your experiment's ID was associated with your account during registration, yo
 
 #### Add a data panel
 Dashboards in Grafana are made up of panels. Panels can be added with a button in the top right of the page.
-![](gifs/grafana_add_panel.mp4)
+![](gifs/grafana_add_panel.gif)
