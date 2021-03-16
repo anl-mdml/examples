@@ -1,7 +1,7 @@
 # MDML Examples
 Try this example on [Google Collab](https://colab.research.google.com/github/anl-mdml/examples/blob/main/intro.ipynb).
 
-## Grafana Dashboard Tutorial
+## Tutorial of Grafana Dashboard Basics
 
 This tutorial will show how to:
 * Log in to Grafana
@@ -26,4 +26,10 @@ Grafana shows real-time data by connecting to and querying a data source. The MD
 ![](gifs/grafana_data_source.gif)
 
 #### Build a query
-After adding a panel and selecting a data source, create a query to start viewing data. Data streamed from MDML devices are stored in a table with the following format "[Experiment ID] "  
+After adding a panel and selecting a data source, a query is needed to start viewing data. Data streamed via the MDML is stored in PostgreSQL as tables with the following format "[Experiment ID].[Device ID]". Column names for each table are identical to the variables names used while streaming. For example, our tutorial will have a table titled __TUTORIAL.device1__ and data in columns __time__, __val1__, and __val2__. __time__ is used by Grafana as the time column to organize the time-series data. The right side of the page can be used to change panel settings, display options to customize the graph, and visualization types.
+![](gifs/grafana_query.gif)
+
+#### View streaming data in real-time
+Your streaming data should now be visible and will update according to the refresh rate set on the dashboard (dropdown in the upper right hand corner). Panels can be resized and/or moved around the page. The data panel itself is interactive. It will show data values when hovering and will zoom in with a click and drag. Notice that zooming will change the time range (top right corner of dashboard) used when querying which affects all other panels.
+
+## Grafana and Image Streaming
