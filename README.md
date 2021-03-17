@@ -32,4 +32,11 @@ After adding a panel and selecting a data source, a query is needed to start vie
 #### View streaming data in real-time
 Your streaming data should now be visible and will update according to the refresh rate set on the dashboard (dropdown in the upper right hand corner). Panels can be resized and/or moved around the page. The data panel itself is interactive. It will show data values when hovering and will zoom in with a click and drag. Notice that zooming will change the time range (top right corner of dashboard) used when querying which affects all other panels.
 
-## Grafana and Image Streaming
+## Grafana and other data types in MDML
+The Grafana basics tutorial above covers how to visualize any data sent via the .publish_data() method in the MDML Python client. However, it is possible to stream vector data and image data via the MDML. This section will assume that data has already been streamed and go over querying for that data in Grafana.
+
+#### Vector data
+In the MDML, vector data can be used for things like spectrometry scans where it does not make sense to have a column for every wavelength. Instead, two vectors are used to represent the data. In the case of spectrometry data, the vectors could be wavelength and intensity values. This type of data is best displayed with Grafana's Plotly visualization type.  
+
+#### Image data
+Before querying for this data in Grafana, it is important to know how image streaming is done in the MDML. When the MDML receives image data, it loads the image into a motion-JPEG stream. This stream's endpoint must be initially created by an MDML admin.     
