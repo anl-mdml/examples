@@ -1,5 +1,5 @@
-# MDML Examples
-Try this example on [Google Collab](https://colab.research.google.com/github/anl-mdml/examples/blob/main/intro.ipynb).
+# MDML Tutorial
+Try the tutorial notebook on [Google Collab](https://colab.research.google.com/github/anl-mdml/examples/blob/main/intro.ipynb).
 
 ## Tutorial of Grafana Dashboard Basics
 
