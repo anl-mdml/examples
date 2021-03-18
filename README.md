@@ -36,7 +36,8 @@ Your streaming data should now be visible and will update according to the refre
 The Grafana basics tutorial above covers how to visualize any data sent via the .publish_data() method in the MDML Python client. However, it is possible to stream vector data and image data via the MDML. This section will assume that data has already been streamed and go over querying for that data in Grafana.
 
 #### Vector data
-In the MDML, vector data can be used for things like spectrometry scans where it does not make sense to have a column for every wavelength. Instead, two vectors are used to represent the data. In the case of spectrometry data, the vectors could be wavelength and intensity values. This type of data is best displayed with Grafana's Plotly visualization type.  
+In the MDML, vector data can be used for things like spectrometry scans where it does not make sense to have a column for every wavelength. Instead, two vectors are used to represent the data. In the case of spectrometry data, the vectors are wavelength and intensity. This type of data is best displayed with Grafana's Plotly visualization type. The gif below shows how to visualize vector data in the MDML. Important to note is the where statement of the query. Without the WHERE statement, all data ever sent for the device would be returned. Therefore, we querying for the most recent scan number and limit the main query to that scan value.    
+![](gifs/grafana_vector.gif)
 
 #### Image data
-Before querying for this data in Grafana, it is important to know how image streaming is done in the MDML. When the MDML receives image data, it loads the image into a motion-JPEG stream. This stream's endpoint must be initially created by an MDML admin.     
+Before displaying image data in Grafana, it is important to know how image streaming is done in the MDML. When the MDML receives image data, it saves the original image to the file system and converts the image to a JPEG for use in a motion-JPEG stream. This stream's endpoint must be initially created by an MDML admin. 
