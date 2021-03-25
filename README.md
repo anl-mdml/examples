@@ -2,7 +2,7 @@
 Try the tutorial notebook on [Google Collab](https://colab.research.google.com/github/anl-mdml/examples/blob/main/intro.ipynb).
 
 ## Accessing Archived Experiment Data
-After streaming data through the MDML and sending a reset message, the MDML creates a tar file with all of the data streamed during the experiment. This includes an experiment configuration json, csv files generated from the timeseries database, and all image files streamed. This tar file is then uploaded to an object store called MinIO. The Minio bucket (folder) for your experiment's tar files can be accessed at https://[MDML Hostname]/minio/mdml-[lowercase experiment ID]. For example, to access the tar file from the tutorial https://52.4.135.44/minio/mdml-tutorial
+After completing an experiment run, the MDML creates a tar file with all relevant experiment data. This includes the experiment configuration json, csv files generated from the timeseries database, and all image files streamed. This tar file is then uploaded to MDML's object store, MinIO. The Minio bucket for all of your experiment's tar files can be accessed at https://[MDML Hostname]/minio/mdml-[experiment ID]. For example, access any tar files created from the tutorial notebook at https://52.4.135.44/minio/mdml-tutorial.
 
 ## Tutorial of Grafana Dashboard Basics
 
