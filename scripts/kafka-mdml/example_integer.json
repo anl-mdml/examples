@@ -1,0 +1,29 @@
+{
+    "$schema": "http://merf.egs.anl.gov/mdml-example-integer-data-schema#",
+    "title": "ExampleInteger",
+    "description": "Schema for MDML with Kafka example integer data",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "ID of the data point",
+            "type": "number"
+        },
+        "time": {
+            "description": "Unix time the data point occurred",
+            "type": "number"
+        },
+        "int1": {
+            "description": "Random integer 1",
+            "type": "number"
+        },
+        "int2": {
+            "description": "Random integer 2",
+            "type": "number"
+        },
+        "int3": {
+            "description": "Random integer 3",
+            "type": "number"
+        }
+    },
+    "required": [ "id", "time", "int1", "int2", "int3" ]
+}
