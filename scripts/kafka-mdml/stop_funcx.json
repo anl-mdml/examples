@@ -1,0 +1,13 @@
+{
+    "$schema": "http://merf.egs.anl.gov/mdml-example-stop-funcx-schema#",
+    "title": "StopFuncx",
+    "description": "Schema for the message that will stop a FuncX function",
+    "type": "object",
+    "properties": {
+        "stop": {
+            "description": "ID of the data point",
+            "type": "boolean"
+        }
+    },
+    "required": [ "stop" ]
+}
