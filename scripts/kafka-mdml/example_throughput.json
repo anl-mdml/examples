@@ -1,0 +1,17 @@
+{
+    "$schema": "http://merf.egs.anl.gov/mdml-example-throughput-data-schema#",
+    "title": "ExampleThroughput",
+    "description": "Schema for Kafka MDML example throughput data",
+    "type": "object",
+    "properties": {
+        "time": {
+            "description": "Unix time the data point occurred",
+            "type": "number"
+        },
+        "random_part": {
+            "description": "Random part to fill out the message size",
+            "type": "string"
+        }
+    },
+    "required": [ "time", "random_part" ]
+}
