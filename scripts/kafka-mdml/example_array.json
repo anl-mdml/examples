@@ -1,0 +1,31 @@
+{
+    "$schema": "http://merf.egs.anl.gov/mdml-example-array-data-schema#",
+    "title": "ExampleArray",
+    "description": "Schema for MDML with Kafka example array data",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "ID of the data point",
+            "type": "number"
+        },
+        "time": {
+            "description": "Unix time the data point occurred",
+            "type": "number"
+        },
+        "wavelength": {
+            "description": "Array of wavelength values",
+            "type": "array",
+            "items": {
+                "type": "number"
+            }
+        },
+        "intensity": {
+            "description": "Array of intensity values",
+            "type": "array",
+            "items": {
+                "type": "number"
+            }
+        }
+    },
+    "required": [ "id", "time", "wavelength", "intensity" ]
+}
