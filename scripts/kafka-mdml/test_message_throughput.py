@@ -32,6 +32,8 @@ while time.time() - start < int(args.seconds):
     dat['time'] = time.time()
     producer.produce(dat)
     i += 1
+    if i % 1000 == 0:
+        producer.flush()
 end = time.time()
 
 print(f"Sent {i} messages with a random part size of {args.bytes} bytes in {end-start} seconds.")
