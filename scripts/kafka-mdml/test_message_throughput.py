@@ -24,7 +24,7 @@ producer = mdml.kafka_mdml_producer(
 )
 
 dat = {
-    'random_part': "A" * int(args.bytes)
+    'filler': "A" * int(args.bytes)
 }
 i=0
 start = time.time()

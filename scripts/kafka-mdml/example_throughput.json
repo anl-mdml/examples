@@ -8,10 +8,10 @@
             "description": "Unix time the data point occurred",
             "type": "number"
         },
-        "random_part": {
-            "description": "Random part to fill out the message size",
+        "filler": {
+            "description": "Part to fill out the message size",
             "type": "string"
         }
     },
-    "required": [ "time", "random_part" ]
+    "required": [ "time", "filler" ]
 }
