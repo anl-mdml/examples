@@ -4,14 +4,10 @@
     "description": "Schema for Kafka MDML example throughput data",
     "type": "object",
     "properties": {
-        "time": {
-            "description": "Unix time the data point occurred",
-            "type": "number"
-        },
         "filler": {
             "description": "Part to fill out the message size",
             "type": "string"
         }
     },
-    "required": [ "time", "filler" ]
+    "required": [ "filler" ]
 }

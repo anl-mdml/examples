@@ -28,8 +28,8 @@ dat = {
 }
 i=0
 start = time.time()
-while time.time() - start < int(args.seconds):
-    dat['time'] = time.time()
+end_time = start + int(args.seconds)
+while time.time() < end_time:
     producer.produce(dat)
     i += 1
     if i % 1000 == 0:
