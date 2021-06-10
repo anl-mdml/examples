@@ -38,3 +38,4 @@ end = time.time()
 
 print(f"Sent {i} messages with a random part size of {args.bytes} bytes in {end-start} seconds.")
 print(f"AVG Messages Per Second: {i/(end-start)}")
+print(f"AVG MB/sec {(i/(end-start))*(int(args.bytes)/1000000)}")
