@@ -10,6 +10,8 @@ parser.add_argument("--seconds", help="Number of seconds to send messages",
                         required=True)
 parser.add_argument("--bytes", help="Number of bytes for the message",
                         required=True)
+parser.add_argument("--acks", help="Ack config setting",
+                        required=True)
 args = parser.parse_args()
 
 import time
@@ -20,7 +22,8 @@ producer = mdml.kafka_mdml_producer(
     schema = "example_throughput.json",
     kafka_host = args.host,
     kafka_port = int(args.port),
-    schema_host = args.srhost
+    schema_host = args.srhost,
+    acks = args.acks
 )
 
 dat = {
