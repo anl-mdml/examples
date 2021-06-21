@@ -27,4 +27,5 @@ for msg in consumer.consume():
         with open(f'streamed/{fn.split("/")[1]}', 'wb') as f:
             f.write(dat_bytes)
         # print(files[fn].keys())
-        del files[fn]
+        print(time.time())
+        # del files[fn]

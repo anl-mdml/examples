@@ -26,11 +26,11 @@ def send_image(fn, part_size, producer):
             'filename': fn
         }
         producer.produce(dat)
-        print(f"sent part {part}")
         part += 1
     producer.flush()
 
 start = time.time()
+print(start)
 for img in images:
     send_image(img, 100000, producer)
 end = time.time()
