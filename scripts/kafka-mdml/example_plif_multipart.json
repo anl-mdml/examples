@@ -1,0 +1,21 @@
+{
+    "$schema": "http://merf.egs.anl.gov/mdml-example-multipart-data-schema#",
+    "title": "MultipartMessageSchema",
+    "description": "Schema for Kafka MDML data messages that are split into multiple messages",
+    "type": "object",
+    "properties": {
+        "b64": {
+            "description": "File bytes in Base64",
+            "type": "string"
+        },
+        "part": {
+            "description": "Message part description",
+            "type": "string"
+        },
+        "filename": {
+            "description": "Name of the file",
+            "type": "string"
+        }
+    },
+    "required": [ "b64", "part", "filename" ]
+}
