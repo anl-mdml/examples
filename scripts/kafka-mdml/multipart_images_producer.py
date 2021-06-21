@@ -30,7 +30,8 @@ def send_image(fn, part_size, producer):
     producer.flush()
 
 start = time.time()
-print(start)
+print(f"streaming {len(images)} images")
+print(f"start: {start}")
 for img in images:
     send_image(img, 100000, producer)
 end = time.time()
