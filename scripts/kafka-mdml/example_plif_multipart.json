@@ -4,8 +4,8 @@
     "description": "Schema for Kafka MDML data messages that are split into multiple messages",
     "type": "object",
     "properties": {
-        "b64": {
-            "description": "File bytes in Base64",
+        "chunk": {
+            "description": "File chunk",
             "type": "string"
         },
         "part": {
@@ -15,7 +15,11 @@
         "filename": {
             "description": "Name of the file",
             "type": "string"
+        },
+        "encoding": {
+            "description": "Encoding used",
+            "type": "string"
         }
     },
-    "required": [ "b64", "part", "filename" ]
+    "required": [ "chunk", "part", "filename", "encoding" ]
 }
